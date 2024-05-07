@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import CustomUser
 from .models import Task
+# updates
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -31,7 +32,5 @@ class TaskMemberSerializer(serializers.ModelSerializer):
         fields = ['id', 'username'] 
 
 class TokenSerializer(serializers.Serializer):
-    """
-    Serializer for JWT token
-    """
+   
     token = serializers.CharField(max_length=255)   
